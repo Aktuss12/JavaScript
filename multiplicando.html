@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando dois numeros</title>
+</head>
+<body>
+    <button id="somar">Somando Numeros</button>
+
+    <script>
+
+        console.log("Hello World!")
+
+        document.getElementById('somar').addEventListener('click', function() {
+            const num1 = parseFloat(prompt("Digite o primeiro número:"));
+            const num2 = parseFloat(prompt("Digite o segundo número:"));
+            const soma = num1 + num2;
+            alert("A soma dos dois numeros é: " + (soma));
+        });
+    </script>
+</body>
+</html>

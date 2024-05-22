@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média</title>
+</head>
+<body>
+
+    <div align="center">
+    <h1>Calculando a Média</h1>
+
+    <p>Insira as notas do aluno:</p>
+
+    <input type="numeros" id="nota1" placeholder="Nota 1">
+    <input type="numeros" id="nota2" placeholder="Nota 2">
+    <input type="numeros" id="nota3" placeholder="Nota 3">
+    <input type="numeros" id="nota4" placeholder="Nota 4">
+
+    <br><br>
+    <button id="calculadora">Calcular Média</button>
+    </div>
+
+    <p align="center" id="resultado"></p>
+
+    <script>
+
+    document.getElementById("calculadora").addEventListener("click", function() {
+    var nota1 = parseFloat(document.getElementById("nota1").value);
+    var nota2 = parseFloat(document.getElementById("nota2").value);
+    var nota3 = parseFloat(document.getElementById("nota3").value);
+    var nota4 = parseFloat(document.getElementById("nota4").value);
+
+    var total = nota1 + nota2 + nota3 + nota4;
+    var media = total / 4;
+
+    document.getElementById("resultado").innerText = "A média do aluno é: " + media.toFixed(2);
+    });
+
+    </script>
+</body>
+</html>
