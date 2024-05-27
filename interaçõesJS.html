@@ -19,17 +19,23 @@
 </head>
 <body>
     
+    <!-- Div direcionada as funções do mouse -->
     <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">interações JS</div>
 
     <script>
+        // Adiciona a informação que foi clicado com um background "Aqua"
         var a = document.getElementById('area');
         function clicar(){
             a.innerText = "clicou";
             a.style.background = "aqua";
         }
+
+        // Adiciona a informação de que "Entrou" com o mouse da div
         function entrar(){
             a.innerText = "entrou";
         }
+
+        // Adiciona a informação de que "Saiu" com o mouse da div 
         function sair(){
             a.innerText = "saiu";
             a.style.background = "black";
