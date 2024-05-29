@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificador de par ou impar</title>
+</head>
+<body>
+    <h1>Verificador de par ou impar</h1>
+    <p>Digite um numero:</p>
+    <input type="text" id="numero" placeholder="Digite um numero">
+    <button onclick="verificar()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            let numero = document.getElementById("numero").value;
+            
+            numero = parseInt(numero);
+
+            if (isNaN(numero)) {
+                document.getElementById("resultado").innerText = "Digite um numero";
+                return;
+            }
+            if (numero % 2 === 0) {
+                document.getElementById("resultado").innerText = "O numero " + numero + " é par";
+            } else {
+                document.getElementById("resultado").innerText = "O numero " + numero + " é impar";
+            }
+        }
+    </script>
+</body>
+</html>

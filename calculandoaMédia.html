@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a Média</title>
+</head>
+<body>
+    <script>
+        function calcular() {
+
+            const nota1 = parseFloat(prompt("Digite a nota 1:"));
+            const nota2 = parseFloat(prompt("Digite a nota 2:"));
+
+            const notasArray = [nota1, nota2];
+
+            let soma = 0;
+            for (let i = 0; i < notasArray.length; i++) {
+                soma += notasArray[i];
+            }
+            const media = soma / notasArray.length;
+
+            alert(`A média é: ${media.toFixed(2)}`);
+            if (media >= 7) {
+                alert('Parabéns, você foi aprovado');
+            } else {
+                alert('Você não foi aprovado :(');
+            }
+        }
+
+        calcular();
+    </script>
+</body>
+</html>
